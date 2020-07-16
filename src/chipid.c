@@ -544,26 +544,15 @@ static const struct stlink_chipid_params devices[] = {
             .bootrom_size = 0x7000           // 28K (sec 2.2.2 table 2)
         },
         {
-          // STM32G431/441 (from RM0440)
-          .chip_id = STLINK_CHIPID_STM32_G4_CAT2,
-          .description = "G4 Category-2 device",
-          .flash_type = STLINK_FLASH_TYPE_G4,
-          .flash_size_reg = 0x1FFF75E0,    // Section 47.2
-          .flash_pagesize = 0x800,         // 2K (sec 3.3.1)
-          .sram_size = 0x8000,             // 32K (sec 2.4)
-          .bootrom_base = 0x1fff0000,
-          .bootrom_size = 0x7000           // 28K (table 2)
-        },
-        {
-          // STM32G474/484 (from RM0440)
-          .chip_id = STLINK_CHIPID_STM32_G4_CAT3,
-          .description = "G4 Category-3 device",
-          .flash_type = STLINK_FLASH_TYPE_G4,
-          .flash_size_reg = 0x1FFF75E0,    // Section 47.2
-          .flash_pagesize = 0x800,         // 2K (sec 3.3.1)
-          .sram_size = 0x1C000,             // 32K (sec 2.4)
-          .bootrom_base = 0x1fff0000,
-          .bootrom_size = 0x7000           // 28K (table 2)
+            // STM32G431/441 (from RM0440)
+            .chip_id = STLINK_CHIPID_STM32_G4_CAT2,
+            .description = "G4 Category-2 device",
+            .flash_type = STLINK_FLASH_TYPE_G4,
+            .flash_size_reg = 0x1FFF75E0,    // Section 47.2
+            .flash_pagesize = 0x800,         // 2K (sec 3.3.1)
+            .sram_size = 0x8000,             // 32K (sec 2.4)
+            .bootrom_base = 0x1fff0000,
+            .bootrom_size = 0x7000           // 28K (table 2)
         },
         {
             // STM32WB55 (from RM0434)

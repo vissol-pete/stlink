@@ -98,10 +98,10 @@ ssize_t send_recv(struct stlink_libusb* handle, int terminate,
             &res,
             3000);
     if (t) {
-      ILOG("[!] send_recv send request failed: %s\n", libusb_error_name(t));
+        printf("[!] send_recv send request failed: %s\n", libusb_error_name(t));
         return -1;
     } else if ((size_t)res != txsize) {
-      ILOG("[!] send_recv send request wrote %u bytes (instead of %u).\n",
+        printf("[!] send_recv send request wrote %u bytes (instead of %u).\n",
        (unsigned int)res, (unsigned int)txsize);
     }
 
@@ -112,7 +112,7 @@ ssize_t send_recv(struct stlink_libusb* handle, int terminate,
                 &res,
                 3000);
         if (t) {
-          ILOG("[!] send_recv read reply failed: %s\n",
+            printf("[!] send_recv read reply failed: %s\n",
                     libusb_error_name(t));
             return -1;
         }
@@ -127,7 +127,7 @@ ssize_t send_recv(struct stlink_libusb* handle, int terminate,
                 &res,
                 3000);
         if (t) {
-          ILOG("[!] send_recv read storage failed: %s\n",
+            printf("[!] send_recv read storage failed: %s\n",
                     libusb_error_name(t));
             return -1;
         }
